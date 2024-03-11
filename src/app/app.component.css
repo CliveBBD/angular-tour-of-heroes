@@ -5,7 +5,7 @@ h1 {
     justify-content: center;
     text-align: center;
   }
-  nav a {
+  .anchors {
     padding: 0.5rem;
     text-decoration: none;
     display: inline-block;
@@ -19,8 +19,10 @@ h1 {
     color: white;
     background-color: #42545C;
   }
-  nav a:active {
-    background-color: black;
+
+  .active {
+    background-color: #42545C;
+    color: white;
   }
 
   nav {

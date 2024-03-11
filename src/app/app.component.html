@@ -10,8 +10,8 @@
   <h1>{{title}}</h1>
 
   <nav>
-    <a routerLink="/dashboard" id="dashboard">Dashboard</a>
-    <a routerLink="/heroes">Heroes</a>
+    <a routerLink="/dashboard" (click)="setActive('dashboard')" [class.active]="activeAnchor==='dashboard'" class="anchors">Dashboard</a>
+    <a routerLink="/heroes" (click)="setActive('heroes')" [class.active]="activeAnchor==='heroes'" class="anchors">Heroes</a>
   </nav>
 
   <router-outlet></router-outlet>

@@ -29,11 +29,15 @@ label {
   #hero-details-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    border: 1px solid #3f525c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
   }
 
   #hero-details-container {
     display: flex;
-    border: 2px solid black;
+    justify-content: center;
     margin-top: 10px;
   }
 

@@ -21,7 +21,7 @@ import { RouterModule } from '@angular/router';
     NgFor,
     UpperCasePipe,
     HeroDetailComponent,
-    RouterModule
+    RouterModule,
   ],
 })
 export class HeroesComponent implements OnInit {

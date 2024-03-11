@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
+
+  public activeAnchor?: string;
+
+  setActive(anchor: string): void {
+    this.activeAnchor = anchor;
+  }
 }
