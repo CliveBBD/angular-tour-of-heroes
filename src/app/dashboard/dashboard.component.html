@@ -6,16 +6,17 @@
     <title>Dashboard</title>
 </head>
 <body>
-    
-    <h2>Top Heroes</h2>
+    <section id="dashboard-main">
+        <h2>Top Heroes</h2>
 
-    <p class="heroes-menu">
-        <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
-            {{hero.name}}
-        </a>
-    </p>
+        <p class="heroes-menu">
+            <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+                {{hero.name}}
+            </a>
+        </p>
 
-    <app-hero-search></app-hero-search>
+        <app-hero-search></app-hero-search>
+    </section>
 
 </body>
 </html>
