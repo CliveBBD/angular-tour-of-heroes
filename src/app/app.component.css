@@ -1,6 +1,8 @@
 /* AppComponent's private CSS styles */
 h1 {
     margin-bottom: 0;
+    display: flex;
+    justify-content: center;
   }
   nav a {
     padding: 1rem;
@@ -9,6 +11,7 @@ h1 {
     background-color: #e8e8e8;
     color: #3d3d3d;
     border-radius: 4px;
+    margin: 0 5px 0px;
   }
   
   nav a:hover {
@@ -21,6 +24,5 @@ h1 {
 
   nav {
     display: flex;
-    max-width: 25%;
-    justify-content: space-between;
+    justify-content: center;
   }
