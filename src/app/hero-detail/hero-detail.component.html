@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Details</title>
+</head>
+<body>
+    
+    <p></p>
+    
+    <section *ngIf="hero">
+        <h2>{{ hero.name | uppercase }} Details</h2>
+
+        <p>id: {{ hero.id }}</p>
+
+        <article class="app-hero-detail">
+          <label for="hero-name">Hero name: </label>
+          <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+        </article>
+        
+        <button type="button" (click)="goBack()">go back</button>
+        <button type="button" (click)="save()">save</button>
+    </section>
+
+</body>
+</html>
+
+
