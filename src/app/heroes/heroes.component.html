@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heroes Component</title>
-</head>
-<body>
-    
-    <h2>My Heroes</h2>
+<h2>My Heroes</h2>
 
-    <article>
-        <label for="new-hero">Hero name: </label>
-        <input id="new-hero" #heroName />
-      
-        <!-- (click) passes input value to add() and then clears the input -->
-        <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
-          Add hero
-        </button>
-    </article>
+<article>
+    <label for="new-hero">Hero name: </label>
+    <input id="new-hero" #heroName />
     
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+        Add hero
+    </button>
+</article>
+
+<section id="list-heroes">
     <ul class="heroes">
         <li *ngFor="let hero of heroes" class="selected">
             <a routerLink="/detail/{{hero.id}}">
@@ -28,6 +20,5 @@
                 (click)="delete(hero)">x</button>
         </li>
     </ul>
+</section>
 
-</body>
-</html>

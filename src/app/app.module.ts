@@ -17,7 +17,6 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
   declarations: [
     AppComponent,
     MessagesComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -33,7 +32,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     DashboardComponent,
     HeroSearchComponent
   ],
-  providers: [],
+  providers: [ InMemoryDataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

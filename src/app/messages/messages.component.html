@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messages Component</title>
-</head>
-<body>
+<section *ngIf="messageService.messages.length" id="messages">
+
+    <h2>Messages</h2>
+    <button type="button" class="clear"
+            (click)="messageService.clear()">Clear messages</button>
+    <p *ngFor='let message of messageService.messages'> {{message}} </p>
     
-    <section *ngIf="messageService.messages.length" id="messages">
-
-        <h2>Messages</h2>
-        <button type="button" class="clear"
-                (click)="messageService.clear()">Clear messages</button>
-        <p *ngFor='let message of messageService.messages'> {{message}} </p>
-      
-    </section>
-
-</body>
-</html>
+</section>
