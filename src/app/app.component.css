@@ -21,6 +21,6 @@ h1 {
 
   nav {
     display: flex;
-    max-width: 20%;
+    max-width: 25%;
     justify-content: space-between;
   }
