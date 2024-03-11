@@ -98,6 +98,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "angular-tour-of-heroes:build:production",
+              "serveTarget": "angular-tour-of-heroes:serve:production"
+            },
+            "development": {
+              "buildTarget": "angular-tour-of-heroes:build:development",
+              "serveTarget": "angular-tour-of-heroes:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
