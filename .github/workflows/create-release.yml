@@ -1,24 +1,26 @@
+name: Azure Static Web Apps prod CI/CD
+
 on:
   push:
     branches:
       - master
 
-name: Create Release
-
 jobs:
-  build:
-    name: Create Release
+  build_release_job:
+    name: Build SWA
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: v${{ github.run_number }}
-          release_name: Release-${{ github.run_number }}
-          draft: false
-          prerelease: false
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+        lfs: false
+    - name: Install dependencies
+      run: npm run install
+    - name: Build project
+      run: npm run build
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Static Web App
+        path: dist/
